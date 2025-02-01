@@ -24,7 +24,7 @@ public class QuestionService {
     // to print questions
     public void playQuiz() {
         for(Question q:question) {
-            System.out.println("Question id"+q.getId());
+            System.out.println("Question id :"+q.getId());
             System.out.println(q.getQuestion());
             System.out.println(q.getOpt1());
             System.out.println(q.getOpt2());
@@ -40,7 +40,7 @@ public class QuestionService {
                 score  = score + 10;
                 
             }
-
+            System.out.println("");
             System.out.println("Your total Score \n"+score); 
         }
     }
