@@ -11,7 +11,7 @@ public class Question {
         System.out.println("Non-parameterized constructor");
     }
 
-    Question(int id,String question,string opt1,String opt2,String opt3,String opt4,String answer) {
+    Question(int id,String question,String opt1,String opt2,String opt3,String opt4,String answer) {
         this.id = id;
         this.question = question;
         this.opt1 = opt1;
@@ -76,5 +76,15 @@ public class Question {
     public void setAnswer(String answer) {
         this.answer = answer;
     }
+
+    @Override
+    public String toString() {
+        return "\n" +question + "\n" +
+               "1. " + opt1 + " " +
+               "2. " + opt2 + " " +
+               "3. " + opt3 + " " +
+               "4. " + opt4;
+    }
+    
 
 }
