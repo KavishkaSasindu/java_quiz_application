@@ -8,6 +8,6 @@ public class Main {
 
         QuestionService service = new QuestionService();
 
-        service.displayQuestions();
+        service.playQuiz();
     }
 }

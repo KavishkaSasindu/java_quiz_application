@@ -1,4 +1,8 @@
+import java.util.Scanner;
+
 public class QuestionService {
+
+    int score = 0;
 
     // create question array
     Question question[] = new Question[5];
@@ -18,9 +22,26 @@ public class QuestionService {
     }
 
     // to print questions
-    public void displayQuestions() {
+    public void playQuiz() {
         for(Question q:question) {
-            System.out.println(q.toString());
+            System.out.println("Question id"+q.getId());
+            System.out.println(q.getQuestion());
+            System.out.println(q.getOpt1());
+            System.out.println(q.getOpt2());
+            System.out.println(q.getOpt3());
+            System.out.println(q.getOpt4());
+            System.out.println("");
+            System.out.print("Your answer :");
+            Scanner input = new Scanner(System.in);
+
+            String userAnswer = input.nextLine();
+
+            if(userAnswer.equals(q.getAnswer())) {
+                score  = score + 10;
+                
+            }
+
+            System.out.println("Your total Score \n"+score); 
         }
     }
 }
